@@ -10485,3 +10485,66 @@ div#test-mail > img.feedback-img {
 form#organization-confirm-delete-form > button:disabled {
   background-color: grey;
 }
+/* Buscador de recursos del dataset (compilado desde sass/package/snippets/resources_search.scss) */
+#pkg-resources-search {
+  position: relative;
+  margin: 20px 0 0 0;
+}
+#pkg-resources-search .pkg-resources-search-field {
+  position: relative;
+}
+#pkg-resources-search input.pkg-resources-search-input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  height: 40.2px;
+  margin: 0;
+  padding: 10px 40px 10px 0;
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #cccccc;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #424242;
+  -webkit-appearance: none;
+}
+#pkg-resources-search input.pkg-resources-search-input:focus {
+  outline: none;
+  border-bottom-color: #0695d6;
+}
+#pkg-resources-search input.pkg-resources-search-input::-webkit-input-placeholder {
+  color: #767676;
+}
+#pkg-resources-search input.pkg-resources-search-input::-moz-placeholder {
+  color: #767676;
+}
+#pkg-resources-search input.pkg-resources-search-input:-ms-input-placeholder {
+  color: #767676;
+}
+#pkg-resources-search input.pkg-resources-search-input::placeholder {
+  color: #767676;
+}
+#pkg-resources-search input.pkg-resources-search-input::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button;
+}
+#pkg-resources-search .pkg-resources-search-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  pointer-events: none;
+}
+#pkg-resources-search .pkg-resources-search-count {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  color: #767676;
+}
+#pkg-resources-search .pkg-resources-search-empty {
+  margin: 20px 0 0 0;
+  font-size: 16px;
+  color: #424242;
+}

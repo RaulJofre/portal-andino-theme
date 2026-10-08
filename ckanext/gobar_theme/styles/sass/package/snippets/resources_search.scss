@@ -1,0 +1,64 @@
+// Buscador de recursos en la página del dataset (templates/package/snippets/main_info.html)
+#pkg-resources-search {
+  position: relative;
+  margin: 20px 0 0 0;
+  $font-size: 16px;
+  $padding: 10px;
+  $icon-size: 20px;
+  $line-height: 1.2;
+
+  .pkg-resources-search-field {
+    position: relative;
+  }
+
+  input.pkg-resources-search-input {
+    display: block;
+    width: 100%;
+    // El CSS base de CKAN fija "height: 20px" a los inputs; se define la altura explícitamente
+    box-sizing: border-box;
+    height: $padding * 2 + $font-size * $line-height + 1px;
+    margin: 0;
+    padding: $padding ($icon-size + $padding * 2) $padding 0;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px $grey-200;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $grey-500;
+    -webkit-appearance: none;
+
+    &:focus {
+      outline: none;
+      border-bottom-color: $blue-300;
+    }
+    &::-webkit-input-placeholder { color: $grey-400; }
+    &::-moz-placeholder { color: $grey-400; }
+    &:-ms-input-placeholder { color: $grey-400; }
+    &::placeholder { color: $grey-400; }
+    &::-webkit-search-cancel-button { -webkit-appearance: searchfield-cancel-button; }
+  }
+
+  .pkg-resources-search-icon {
+    position: absolute;
+    top: 50%;
+    right: $padding;
+    width: $icon-size;
+    height: $icon-size;
+    margin-top: -$icon-size * 0.5;
+    pointer-events: none;
+  }
+
+  .pkg-resources-search-count {
+    margin: 10px 0 0 0;
+    font-size: 14px;
+    color: $grey-400;
+  }
+
+  .pkg-resources-search-empty {
+    margin: 20px 0 0 0;
+    font-size: 16px;
+    color: $grey-500;
+  }
+}

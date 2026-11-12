@@ -1,6 +1,7 @@
 {% set resource_url = h.url_for(controller='package', action='resource_read', id=pkg.name, resource_id=resource.id) %}
 {% set format = format or "" %}
-<div class="pkg-container" data-search-text="{{ resource.name }} {{ resource.description }} {{ format }}">
+<div class="pkg-container" data-search-text="{{ resource.name }} {{ resource.description }} {{ format }}"
+     data-sort-name="{{ resource.name }}" data-sort-date="{{ resource.last_modified or resource.created or '' }}">
     <div class="pkg-actions">
         <a href="{{ resource_url }}">
             <button>CONSULTAR</button>

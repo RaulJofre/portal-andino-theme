@@ -27,13 +27,23 @@
     </div>
 
     {% if pkg.resources|length > 1 %}
-        {# Buscador de recursos: filtra en el cliente los recursos listados abajo (js/package/resources_search.js) #}
+        {# Buscador y orden de recursos: filtra y ordena en el cliente los recursos listados abajo (js/package/resources_search.js) #}
         <div id="pkg-resources-search">
-            <div class="pkg-resources-search-field">
-                <input type="search" id="pkg-resources-search-input" class="pkg-resources-search-input"
-                       placeholder="Buscá entre los {{ pkg.resources|length }} recursos del dataset"
-                       aria-label="Buscar recursos del dataset" autocomplete="off" maxlength="200">
-                <img src="/img/search_gris.svg" class="pkg-resources-search-icon" alt="">
+            <div class="pkg-resources-search-row">
+                <div class="pkg-resources-search-field">
+                    <input type="search" id="pkg-resources-search-input" class="pkg-resources-search-input"
+                           placeholder="Buscá entre los {{ pkg.resources|length }} recursos del dataset"
+                           aria-label="Buscar recursos del dataset" autocomplete="off" maxlength="200">
+                    <img src="/img/search_gris.svg" class="pkg-resources-search-icon" alt="">
+                </div>
+                <div class="pkg-resources-sort">
+                    <label for="pkg-resources-sort-select">Ordenar por</label>
+                    <select id="pkg-resources-sort-select" class="pkg-resources-sort-select">
+                        <option value="modified_desc" selected="selected">Última modificación</option>
+                        <option value="name_asc">Ascendente (A - Z)</option>
+                        <option value="name_desc">Descendente (Z - A)</option>
+                    </select>
+                </div>
             </div>
             <p class="pkg-resources-search-count" aria-live="polite"></p>
             <p class="pkg-resources-search-empty hidden">No hay recursos que coincidan con la búsqueda.</p>

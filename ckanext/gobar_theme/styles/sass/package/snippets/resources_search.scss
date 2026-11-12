@@ -1,4 +1,4 @@
-// Buscador de recursos en la página del dataset (templates/package/snippets/main_info.html)
+// Buscador y orden de recursos en la página del dataset (templates/package/snippets/main_info.html)
 #pkg-resources-search {
   position: relative;
   margin: 20px 0 0 0;
@@ -7,8 +7,59 @@
   $icon-size: 20px;
   $line-height: 1.2;
 
+  .pkg-resources-search-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
   .pkg-resources-search-field {
     position: relative;
+    flex: 1 1 260px;
+    min-width: 0;
+  }
+
+  // Combo "Ordenar por", con el mismo estilo que el de la búsqueda de datasets
+  .pkg-resources-sort {
+    flex: 0 0 auto;
+    // margin-left auto lo lleva a la derecha, también cuando baja de línea en pantallas angostas
+    margin-left: auto;
+    padding-left: 20px;
+    padding-bottom: 6px;
+    white-space: nowrap;
+
+    label {
+      display: inline-block;
+      margin: 0;
+      padding-right: 5px;
+      font-weight: 500;
+      font-size: $font-size;
+      color: $grey-400;
+      vertical-align: middle;
+    }
+
+    select.pkg-resources-sort-select {
+      display: inline-block;
+      width: auto;
+      max-width: 220px;
+      height: 30px;
+      margin: 0;
+      padding: 0 4px;
+      font-size: 14px;
+      color: $grey-500;
+      background: white;
+      border: solid 1px $grey-200;
+      border-radius: 4px;
+      vertical-align: middle;
+    }
+
+    @media (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 10px;
+      padding-left: 0;
+      padding-bottom: 0;
+    }
   }
 
   input.pkg-resources-search-input {

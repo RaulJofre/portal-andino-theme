@@ -1,10 +1,14 @@
+# Versiones fijadas el 2026-11-12 a las que trae la imagen oficial release-2.6.3 (Python 2.7):
+# sin fijarlas, pip baja ckanext-xloader 2.x (solo Python 3) y el build de la imagen falla.
 moment==0.8.2
 pydatajson==0.4.16
 redis==2.10.1
 python-crontab==2.3.6
 regex==2019.02.07
 -e git+https://github.com/ckan/ckanext-dcat.git@9709ab5771856303e5ac80bd0f7759ab47d99678#egg=ckanext-dcat
--e git+https://github.com/data-govt-nz/ckanext-security.git#egg=ckanext-security==1.0.1
-ckanext-xloader
-messytables
-requests[security]
+-e git+https://github.com/data-govt-nz/ckanext-security.git@7cb96c246be6f0efcf60cb5406f72cfe5ee76487#egg=ckanext-security
+ckanext-xloader==0.4.1
+messytables==0.15.2
+requests[security]==2.11.1
+cryptography==2.8
+pyOpenSSL==19.1.0
